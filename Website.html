@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Fraud Detection</title>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4CAF50;
+        }
+
+        .cta {
+            background: #4CAF50;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .cta:hover {
+            background: #45a049;
+        }
+
+        /* Hero Section */
+<title>Secure Your Transactions</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ece9e6, #ffffff); /* Soft gradient background */
+            color: #333;
+        }
+
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('https://img.freepik.com/premium-photo/hands-phone-closeup-scanning-qr-code-mobile-phone-paying-storegenerative-ai-illustration_62484-7417.jpg') no-repeat center center/cover;
+            position: relative;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay for better text visibility */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero-content h1 {
+            font-size: 60px;
+            font-family: 'Poppins', sans-serif; /* Modern font */
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #4CAF50; /* Green for emphasis */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Shadow for text depth */
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #f3f3f3; /* Soft white for description text */
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #4CAF50;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #45a049;
+            transform: translateY(-5px);
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .cta-button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Secure Your Transactions</h1>
+            <p>Experience the power of AI in detecting and preventing UPI fraud. Your security is our top priority.</p>
+            <a href="#features" class="cta-button">Explore Features</a>
+        </div>
+    </section>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">UPI Fraud Detection</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="cta">Get Started</a>
+    </header>
+
+    <title>About Us</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #f5f7fa, #c3cfe2); /* Soft background gradient */
+            color: #333;
+        }
+
+        .about-us-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .about-us-container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-us-container h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #2c3e50; /* Dark navy color */
+        }
+
+        .about-us-container p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555; /* Soft gray for readability */
+        }
+
+        .about-us-container p.highlight {
+            font-weight: bold;
+            color: #4CAF50; /* Green for emphasis */
+        }
+
+        .about-us-container a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .about-us-container a:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .about-us-container h1 {
+                font-size: 28px;
+            }
+
+            .about-us-container p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="about-us-section">
+        <div class="about-us-container">
+            <h1>About Us</h1>
+            <p>
+                Welcome to <span class="highlight">Our Company</span>, where we strive to provide the best services tailored to your needs. 
+                With years of experience and a dedicated team of professionals, we are committed to excellence and customer satisfaction.
+            </p>
+            <p>
+                Our mission is to innovate and deliver exceptional value through our products and services. We take pride in 
+                maintaining the highest standards of integrity and quality in everything we do.
+            </p>
+            <p>
+                Thank you for choosing us as your trusted partner. We look forward to serving you and building a lasting relationship!
+            </p>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </section>
+<title>UPI Fraud Detection Features</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #f0f4f8, #d9e4f5);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .feature {
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .feature img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+        .feature h3 {
+            font-size: 1.5em;
+            color: #004080;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            font-size: 1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our UPI Fraud Detection Features</h1>
+        <div class="features">
+            <div class="feature">
+                <img src="https://via.placeholder.com/80/003366/ffffff?text=AI" alt="AI Monitoring">
+                <h3>AI Monitoring</h3>
+                <p>Detect fraudulent transactions in real-time with precision using AI-based systems.</p>
+            </div>
+            <div class="feature">
+                <img src="https://th.bing.com/th/id/OIP.bDYioGV0UtI1Iq-bf0KHOQHaEm?rs=1&pid=ImgDetMain">
+                <h3>Fraud Alerts</h3>
+                <p>Receive instant notifications of suspicious activities on your UPI transactions.</p>
+            </div>
+            <div class="feature">
+                <img src="https://via.placeholder.com/80/0059b3/ffffff?text=Dashboard" alt="Analytics Dashboard">
+                <h3>Analytics Dashboard</h3>
+                <p>Analyze trends and monitor transaction patterns to detect potential fraud.</p>
+            </div>
+        </div>
+    </div>
+</section>
+   <!-- Upload Dataset Section -->
+        <div class="section">
+            <h1>Upload Dataset</h1>
+            <p>Submit your dataset for analysis or fraud detection. Accepted formats: CSV, XLSX, TXT.</p>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="file" name="dataset" accept=".csv,.xlsx,.txt" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Upload Dataset</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Upload Fraud Detection Dataset Section -->
+        <div class="section">
+            <h1>Upload Fraud Detection Dataset</h1>
+            <p>Provide datasets specifically for fraud detection training and testing purposes.</p>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="file" name="fraud-detection-dataset" accept=".csv,.xlsx,.txt" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Upload Fraud Dataset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+ 
+       <style>
+body {
+        /* Transaction Details Section */
+        .transaction-details {
+            background: url('https://img.freepik.com/free-photo/digital-cyber-futuristic-background-design_53876-120314.jpg') no-repeat center center/cover;
+            padding: 80px 20px;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .transaction-details .form-container {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .transaction-details .form-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .transaction-details h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .transaction-details p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .transaction-details .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .transaction-details .form-group label {
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .transaction-details .form-group input,
+        .transaction-details .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            background: #fff;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .transaction-details .form-group input:focus,
+        .transaction-details .form-group select:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+            outline: none;
+        }
+
+        .transaction-details .submit-btn {
+            background: #4CAF50;
+            color: white;
+            font-size: 16px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            width: 100%;
+        }
+
+        .transaction-details .submit-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+
+        /* Center Form Fields */
+        .transaction-details form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .transaction-details .form-container {
+                padding: 30px;
+            }
+
+            .transaction-details h2 {
+                font-size: 24px;
+            }
+
+            .transaction-details .form-group input,
+            .transaction-details .form-group select {
+                font-size: 14px;
+            }
+
+            .transaction-details .submit-btn {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="transaction-details">
+        <div class="form-container">
+            <h2>Transaction Details</h2>
+            <p>Enter the required information below to submit your transaction.</p>
+            <form>
+                <div class="form-group">
+                    <label for="upiHolderName">UPI Holder Name</label>
+                    <input type="text" id="upiHolderName" placeholder="Enter UPI Holder Name">
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" placeholder="Enter Phone Number">
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob">
+                </div>
+                <div class="form-group">
+                    <label for="pincode">Pincode</label>
+                    <input type="text" id="pincode" placeholder="Enter Pincode">
+                </div>
+                <div class="form-group">
+                    <label for="category">Merchant Category</label>
+                    <select id="category">
+                        <option value="" disabled selected>Select Category</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="groceries">Groceries</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" placeholder="Enter Amount">
+                </div>
+                <div class="form-group">
+                    <label for="sellerName">Seller Name</label>
+                    <input type="text" id="sellerName" placeholder="Enter Seller Name">
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state" placeholder="Enter State">
+                </div>
+                <div class="form-group">
+                    <label for="transactionPincode">Transaction Pincode</label>
+                    <input type="text" id="transactionPincode" placeholder="Enter Transaction Pincode">
+                </div>
+                <div class="form-group">
+                    <label for="transactionDate">Date and Time of Transaction</label>
+                    <input type="datetime-local" id="transactionDate">
+                </div>
+                <button type="submit" class="submit-btn">Submit Transaction</button>
+            </form>
+        </div>
+    </div>
+</section>
+<style>
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #e0f7fa, #e0f2f1);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .contact-container {
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px 30px;
+            width: 400px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: box-shadow 0.3s;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 121, 107, 0.5);
+        }
+        .form-group textarea {
+            resize: none;
+            height: 100px;
+        }
+        .form-group button {
+            background: #00796b;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .form-group button:hover {
+            background: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 UPI Fraud Detection. All rights reserved. | <a href="#privacy">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
